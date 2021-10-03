@@ -1,0 +1,12 @@
+/**index.wxss**/
+
+input{
+    font-size: 20px;
+    margin:20px 200rpx;
+    height:30px;
+    border:solid;
+    background-color: white;
+}
+button{
+    margin-top: 50px;
+}
