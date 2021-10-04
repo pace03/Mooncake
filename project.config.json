@@ -35,7 +35,7 @@
     "compileType": "miniprogram",
     "libVersion": "2.20.0",
     "appid": "wx438eb68a6d9f493e",
-    "projectname": "%E8%AE%BE%E7%BD%AE%E5%A5%96%E9%A1%B9",
+    "projectname": "Mooncake",
     "debugOptions": {
         "hidedInDevtools": []
     },

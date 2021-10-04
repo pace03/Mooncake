@@ -15,5 +15,5 @@
     <input type="text" placeholder='三红:'></input>
     <input type="text" placeholder='对堂:'></input>
     <input type="text" placeholder='状元:'></input>
-    <button type="primary">现在开始</button>
+    <button bindtap="gogaming" type="primary">现在开始</button>
 </view>
