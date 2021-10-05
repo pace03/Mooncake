@@ -1,19 +1,35 @@
-<!--index.wxml-->
-<include src='header.wxml'/>
 <!--页面根标签-->
 <view class="content">
-	<!--pics文件夹下的background.jpg文件-->
 	<image class='background' src="../../pics/background.jpg" mode="aspectFill"></image>
-	<!--页面其它部分-->
 </view>
 
 <view class='box'>
-    <view class='title2'>请输入奖品名称：</view>
-    <input type="text" placeholder='一秀:'></input>
-    <input type="text" placeholder='二举:'></input>
-    <input type="text" placeholder='四进:'></input>
-    <input type="text" placeholder='三红:'></input>
-    <input type="text" placeholder='对堂:'></input>
-    <input type="text" placeholder='状元:'></input>
-    <button bindtap="gogaming" type="primary">现在开始</button>
+    <text class='title2'>请输入奖品名称：</text>
+    <view class="kuang">
+        <text class="text1">一秀：</text>
+         <input type="text"> </input>
+    </view>
+    <view class="kuang">
+        <text class="text1">二举：</text>
+         <input type="text"> </input>
+    </view>
+    <view class="kuang">
+        <text class="text1">四进：</text>
+         <input type="text"> </input>
+    </view>
+    <view class="kuang">
+        <text class="text1">三红：</text>
+         <input type="text"> </input>
+    </view>
+    <view class="kuang">
+        <text class="text1">对堂：</text>
+         <input type="text"> </input>
+    </view>
+    <view class="kuang">
+        <text class="text1">状元：</text>
+         <input type="text"> </input>
+    </view>
+    <view class="butt">
+        <button bindtap="gogaming" type="primary" size="default">现在开始</button>
+    </view>
 </view>

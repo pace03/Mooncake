@@ -1,12 +1,35 @@
 /**index.wxss**/
 
 input{
-    font-size: 20px;
-    margin:20px 200rpx;
-    height:30px;
+    font-size: 30rpx;
+    margin: 0rpx;
+    height:60rpx;
     border:solid;
     background-color: white;
 }
-button{
-    margin-top: 50px;
+.text1{
+   font-size: 30rpx;
+   font-weight:1000;
+   color:rgb(5, 243, 252);
+   
 }
+.butt{
+
+    height:300rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+
+}
+.kuang{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    height:90rpx;
+  }
+
+
+  

@@ -1,23 +1,18 @@
 /**app.wxss**/
-.title1{
- line-height: 50px;
-  font-size: 20px;
-  color:white;
-  text-align: center;
-  background-color:slategrey; 
-}
 .title2{
-   font-size: 20px;
-   color:white;
-   margin-top: 100px;
-   text-indent: 65px;
+  font-size: 50rpx;
+  color:white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
   align-items: center;
+  padding-top: 50rpx;
+  height:20%;
 }
 .box{
-  margin-top: 10px;
   border: none;
-  height:400px;
-  width:100%;
+  height:100%;
 }
 page{
   height:100%;
