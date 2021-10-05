@@ -1,0 +1,45 @@
+/**index.wxss**/
+.history-table-wrap{
+    position: absolute;
+    width: 790rpx;
+    height: 1500rpx;
+    left: 50%;
+    margin-left: -395rpx;
+    top: 85rpx;
+    overflow-y: scroll;/*显示滚动条*/
+    overflow-x: hidden;/*不显示滚动条*/
+  }
+  /* 表格代码   */
+  .table{
+    border:1px solid #dadada;
+    border-right:0;
+    border-bottom: 0;
+    width: 98%;
+    margin-left: 1%;
+  }
+  .tr{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+  }
+  .th,.td{
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    text-align: center;
+    width: 100%;
+  }
+  .th1,.td1{
+    width: 10%;
+  }
+  .th{
+    font-weight: 800;
+    background-color: #b66242;
+    font-size: 28rpx;
+    color: #330e0e;
+  }
+  .td{
+    font-size: 20rpx;
+    color: #ec9480;
+  }
+  

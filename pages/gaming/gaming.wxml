@@ -1,3 +1,4 @@
 <view calss="box">
     <text>开始博饼</text>
+    <button bindtap="gohistory" type="primary">历史记录</button>
 </view>

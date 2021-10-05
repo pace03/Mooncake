@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<include src='header.wxml'/>
+<view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">姓名</view>
+          <view class="th th1">一秀</view>
+          <view class="th th1">二举</view>
+          <view class="th th1">四进</view>
+          <view class="th th1">三红</view>
+          <view class="th th1">对堂</view>
+          <view class="th th1">状元</view>
+      </view>
+      <view class="tr" wx:for="{{100}}">
+          <view class="td td1"></view>
+          <view class="td td1"></view>
+          <view class="td td1"></view>
+          <view class="td td1"></view>
+          <view class="td td1"></view>
+          <view class="td td1"></view>
+          <view class="td td1"></view>
+      </view>
+    </view>
+ </view>
