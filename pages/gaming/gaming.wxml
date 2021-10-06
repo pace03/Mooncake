@@ -4,15 +4,17 @@
 	<image class='background' src="../../pics/background.jpg" mode="aspectFill"></image>
 	<!--页面其它部分-->
 </view>
-<view calss="box">
+<view calss="box1">
     
     <button bindtap="gohistory" type="primary">历史记录</button>
 </view>
-<view class="box1">
+<view class="box">
     <button bindtap="gorandom">开始博饼</button>
 </view>
 
 <view class="dice-out">
     <text wx:for="{{dice}}">{{item}}</text>
 </view>
-<text wx:for="{{num}}">{{item}}</text>
+<view class="dice-out">
+    <text wx:for="{{num}}">{{item}}</text>
+</view>
