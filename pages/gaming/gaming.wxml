@@ -4,15 +4,23 @@
 	<image class='background' src="../../pics/background.jpg" mode="aspectFill"></image>
 	<!--页面其它部分-->
 </view>
-<view calss="box1">
-    
-    <button bindtap="gohistory" type="primary">历史记录</button>
+<!-- 整个页面盒子box -->
+<view class="box">
+    <!-- 历史记录按钮盒子lishi -->
+    <view class='lishi'>
+        <button bindtap="gohome" type="primary" size="mini">主菜单</button>
+        <button bindtap="gohistory" type="primary" size="mini">历史记录</button>
+        <!-- gohistory没有写 -->
+    </view>
+    <!-- 数组输出大盒子box1 -->
+    <view class='box1'>
+        <view class="dice-out">
+             <text wx:for="{{dice}}">{{item}}</text>
+        </view>
+         <view class="dice-out">{{result}}</view>
+    </view>
+    <!-- 博饼按钮盒子box2 -->
+    <view class="box2">
+        <button bindtap="gorandom">开始博饼</button>
+    </view>
 </view>
-<view class="box1">
-    <button bindtap="gorandom">开始博饼</button>
-</view>
-
-<view class="dice-out">
-    <text wx:for="{{dice}}">{{item}}</text>
-</view>
-<view class="dice-out">{{result}}</view>
