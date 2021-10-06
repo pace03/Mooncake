@@ -8,13 +8,11 @@
     
     <button bindtap="gohistory" type="primary">历史记录</button>
 </view>
-<view class="box">
+<view class="box1">
     <button bindtap="gorandom">开始博饼</button>
 </view>
 
 <view class="dice-out">
     <text wx:for="{{dice}}">{{item}}</text>
 </view>
-<view class="dice-out">
-    <text wx:for="{{num}}">{{item}}</text>
-</view>
+<view class="dice-out">{{result}}</view>
