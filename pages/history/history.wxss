@@ -17,11 +17,6 @@
     width: 98%;
     margin-left: 1%;
   }
-  .tr{
-    width:100%;
-    display:flex;
-    justify-content: space-evenly;
-  }
   .th,.td{
     padding: 10px;
     border-bottom: 1px solid #dadada;

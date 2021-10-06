@@ -1,5 +1,15 @@
 /**index.wxss**/
-
+.title2{
+    font-size: 50rpx;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    align-items: center;
+    padding-top: 50rpx;
+    height:20%;
+  }
 input{
     font-size: 30rpx;
     margin: 0rpx;

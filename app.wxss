@@ -15,18 +15,6 @@
   text-align: center;
   background-color:slategrey; 
 }
-
-.title2{
-  font-size: 50rpx;
-  color:white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items:center;
-  align-items: center;
-  padding-top: 50rpx;
-  height:20%;
-}
 .box{
   border: none;
   height:100%;
@@ -42,4 +30,18 @@ page{
   background-size:100% 100%;
   z-index: -1;
 }
-
+.tr{
+  width:100%;
+  display:flex;
+  justify-content: space-evenly;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th1,.td1{
+  width: 10%;
+}
