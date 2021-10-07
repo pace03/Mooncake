@@ -13,14 +13,22 @@ Page({
     flag6:0,
     score:0,//同为状元大小判定
     playernum:0,//玩家数量
+    playernum_now:0,//当前玩家号码
     /////奖品名
-    yixiu_award:'x',
-    erju_award:'x',
-    sijin_award:'x',
-    sanhong_award:'x',
-    duitang_award:'x',
-    zhuangyuan_award:'x'
-    /////
+    award_result:'？',
+    yixiu_award:'？',
+    erju_award:'？',
+    sijin_award:'？',
+    sanhong_award:'？',
+    duitang_award:'？',
+    zhuangyuan_award:'？',
+    /////奖品数量
+    yixiu_num:32,
+    erju_num:16,
+    sijin_num:8,
+    sanhong_num:4,
+    duitang_num:2,
+    zhuangyuan_num:1
   },
   // 事件处理函数
 
@@ -32,7 +40,8 @@ Page({
       sijin_award:wx.getStorageSync('sijin'),
       sanhong_award:wx.getStorageSync('sanhong'),
       duitang_award:wx.getStorageSync('duitang'),
-      zhuangyuan_award:wx.getStorageSync('zhuangyuan')
+      zhuangyuan_award:wx.getStorageSync('zhuangyuan'),
+      playernum_now:0
     })
     console.log(this.data.playernum)
     console.log(this.data.yixiu_award)
@@ -189,8 +198,8 @@ Page({
         this.setData({
           flag1:0
         })
-  }
-  switch(this.data.dice[1]){
+    }
+    switch(this.data.dice[1]){
     case 1:
       this.setData({
        flag2:1
@@ -223,8 +232,8 @@ Page({
       break;
     default:
       break
-}
-switch(this.data.dice[2]){
+    }
+    switch(this.data.dice[2]){
   case 1:
     this.setData({
      flag3:1
@@ -257,42 +266,42 @@ switch(this.data.dice[2]){
     break;
   default:
     break
-}
-switch(this.data.dice[3]){
-  case 1:
-    this.setData({
-     flag4:1
-    })
-    break;
-  case 2:
-    this.setData({
-      flag4:2
-    })
-    break;
-  case 3:
-    this.setData({
-      flag4:3
-    })
-    break;
-  case 4:
-    this.setData({
-      flag4:4
-    })
-    break;
-  case 5:
-    this.setData({
-      flag4:5
-    })
-    break;
-  case 6:
-    this.setData({
-      flag4:6
-    })
-    break;
-  default:
-    break
-}
-switch(this.data.dice[4]){
+    }
+    switch(this.data.dice[3]){
+      case 1:
+        this.setData({
+          flag4:1
+        })
+        break;
+      case 2:
+        this.setData({
+         flag4:2
+        })
+        break;
+      case 3:
+        this.setData({
+        flag4:3
+        })
+        break;
+      case 4:
+        this.setData({
+        flag4:4
+        })
+        break;
+      case 5:
+        this.setData({
+        flag4:5
+        })
+        break;
+      case 6:
+        this.setData({
+          flag4:6
+        })
+        break;
+      default:
+      break
+    }
+    switch(this.data.dice[4]){
   case 1:
     this.setData({
      flag5:1
@@ -325,8 +334,8 @@ switch(this.data.dice[4]){
     break;
   default:
     break
-}
-switch(this.data.dice[5]){
+    }
+    switch(this.data.dice[5]){
   case 1:
     this.setData({
      flag6:1
@@ -359,7 +368,7 @@ switch(this.data.dice[5]){
     break;
   default:
     break
-}
+    }
   },
   gorandom(){
     this.data.level=0
@@ -379,9 +388,18 @@ switch(this.data.dice[5]){
       'dice[5]':Math.floor(Math.random()*6)+1
     })
     for(let i=0;i<6;i++){
-      this.data.num[this.data.dice[i]-1]+=1;
+      this.data.num[this.data.dice[i]-1]+=1
     }
     this.judge()
+    this.setData({
+      'playernum_now':this.data.playernum_now+1
+    })
+    if(this.data.playernum_now==this.data.playernum+1){
+      this.setData({
+        'playernum_now':1
+      })
+    }
+    console.log(this.data.playernum_now)
     console.log(this.data.dice)
     console.log(this.data.level)
     console.log(this.data.score)

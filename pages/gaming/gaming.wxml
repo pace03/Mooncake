@@ -166,6 +166,7 @@
    <!-- 数组输出大盒子box1 -->
    <view class='box1'>
          <view class="dice-out">您：{{result}}</view>
+         <view class="dice-out">玩家{{playernum_now}}</view>
     </view>
     <view class="box2">
         <button bindtap="gorandom">开始博饼</button>
