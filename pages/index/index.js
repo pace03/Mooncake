@@ -49,10 +49,17 @@ Page({
     this.setData({
       playnum:e.detail.value
     })
-    console.log(this.data.playnum)
+    //console.log(this.data.playnum)
   },
   // 事件处理函数
   gogaming: function () {
+    wx.setStorageSync('playnum', this.data.playnum)
+    wx.setStorageSync('yixiu', this.data.yixiu)
+    wx.setStorageSync('erju', this.data.erju)
+    wx.setStorageSync('sijin', this.data.sijin)
+    wx.setStorageSync('sanhong', this.data.sanhong)
+    wx.setStorageSync('duitang', this.data.duitang)
+    wx.setStorageSync('zhuangyuan', this.data.zhuangyuan)
     wx.navigateTo({
       url: '/pages/gaming/gaming'
     })

@@ -12,9 +12,34 @@ Page({
     flag5:0,
     flag6:0,
     score:0,//同为状元大小判定
-    result:'白给'
+    result:'白给',
+    playernum:0,
+    yixiu_award:'x',
+    erju_award:'x',
+    sijin_award:'x',
+    sanhong_award:'x',
+    duitang_award:'x',
+    zhuangyuan_award:'x'
   },
   // 事件处理函数
+  onLoad:function(options){
+    this.setData({
+      playernum:wx.getStorageSync('playnum'),
+      yixiu_award:wx.getStorageSync('yixiu'),
+      erju_award:wx.getStorageSync('erju'),
+      sijin_award:wx.getStorageSync('sijin'),
+      sanhong_award:wx.getStorageSync('sanhong'),
+      duitang_award:wx.getStorageSync('duitang'),
+      zhuangyuan_award:wx.getStorageSync('zhuangyuan')
+    })
+    console.log(this.data.playernum)
+    console.log(this.data.yixiu_award)
+    console.log(this.data.erju_award)
+    console.log(this.data.sijin_award)
+    console.log(this.data.sanhong_award)
+    console.log(this.data.duitang_award)
+    console.log(this.data.zhuangyuan_award)
+  },
   gohistory() {
   wx.navigateTo({
     url: '/pages/history/history'
@@ -328,6 +353,7 @@ switch(this.data.dice[5]){
 }
   },
   gorandom(){
+    
     this.data.level=0
     this.data.score=0
     this.setData({
