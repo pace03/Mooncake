@@ -7,27 +7,31 @@
     <text class='title2'>请输入奖品名称：</text>
     <view class="kuang">
         <text class="text1">一秀：</text>
-         <input type="text"> </input>
+         <input type="text" bindinput="handleinput_yixiu"> </input>
     </view>
     <view class="kuang">
         <text class="text1">二举：</text>
-         <input type="text"> </input>
+         <input type="text" bindinput="handleinput_erju"> </input>
     </view>
     <view class="kuang">
         <text class="text1">四进：</text>
-         <input type="text"> </input>
+         <input type="text" bindinput="handleinput_sijin"> </input>
     </view>
     <view class="kuang">
         <text class="text1">三红：</text>
-         <input type="text"> </input>
+         <input type="text" bindinput="handleinput_sanhong"> </input>
     </view>
     <view class="kuang">
         <text class="text1">对堂：</text>
-         <input type="text"> </input>
+         <input type="text" bindinput="handleinput_duitang"> </input>
     </view>
     <view class="kuang">
         <text class="text1">状元：</text>
-         <input type="text"> </input>
+         <input type="text" bindinput="handleinput_zhuangyuan"> </input>
+    </view>
+    <view class="kuang">
+        <text class="text1">人数：</text>
+         <input type="text" bindinput="handleinput_playnum"> </input>
     </view>
     <view class="butt">
         <button bindtap="gogaming" type="primary" size="default">现在开始</button>
