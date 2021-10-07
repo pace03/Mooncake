@@ -344,14 +344,7 @@ switch(this.data.dice[5]){
       'dice[4]':Math.floor(Math.random()*6)+1,
       'dice[5]':Math.floor(Math.random()*6)+1
     })
-    // this.setData({
-    //   'dice[0]':4,
-    //   'dice[1]':4,
-    //   'dice[2]':4,
-    //   'dice[3]':4,
-    //   'dice[4]':6,
-    //   'dice[5]':6,
-    // })
+  
     for(let i=0;i<6;i++){
       this.data.num[this.data.dice[i]-1]+=1;
     }

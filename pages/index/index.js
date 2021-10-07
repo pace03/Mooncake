@@ -49,7 +49,7 @@ Page({
     this.setData({
       playnum:e.detail.value
     })
-    //console.log(this.data.playnum)
+    console.log(this.data.playnum)
   },
   // 事件处理函数
   gogaming: function () {

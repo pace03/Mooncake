@@ -1,27 +1,23 @@
 
 <view class="content">
 	<!--pics文件夹下的background.jpg文件-->
-	<image class='background' src="../../pics/background.jpg" mode="aspectFill"></image>
+	<image class='background' src="../../pics/background3.png" mode="aspectFill"></image>
 	<!--页面其它部分-->
 </view>
-<!-- 整个页面盒子box -->
+<!-- 整个页面盒子box,在app.wxss定义 -->
 <view class="box">
     <!-- 历史记录按钮盒子lishi -->
     <view class='lishi'>
         <button bindtap="gorules" type="primary" size="mini">博饼规则</button>
         <button bindtap="gohistory" type="primary" size="mini">历史记录</button>
     </view>
-    <!-- 数组输出大盒子box1 -->
-    <view class='box1'>
-        <view class="dice-out">
-             <text wx:for="{{dice}}">{{item}}</text>
-        </view>
-         <view class="dice-out">{{result}}</view>
-    </view>
   <view class='boxgif'>
     <view class="gif123">
     <!-- 下面是第一个骰子 -->
         <view class="gifsingle">
+            <view wx:if="{{flag1==0}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:if="{{flag1==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
@@ -43,6 +39,9 @@
         </view>
     <!-- 下面是第二个骰子 -->
         <view class="gifsingle">  
+            <view wx:if="{{flag2==0}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:if="{{flag2==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
@@ -64,6 +63,9 @@
         </view>
     <!-- 下面是第三个骰子 -->
     <view class="gifsingle">  
+            <view wx:if="{{flag3==0}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:if="{{flag3==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
@@ -88,7 +90,10 @@
     <!-- 后三个骰子开始 -->
     <view class='gif456'>
     <!-- 下面是第四个骰子 -->
-        <view class="gifsingle">  
+        <view class="gifsingle">
+            <view wx:if="{{flag4==0}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>  
             <view wx:if="{{flag4==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
@@ -109,7 +114,10 @@
             </view>
         </view>
         <!-- 下面是第五个骰子 -->
-        <view class="gifsingle">  
+        <view class="gifsingle">
+            <view wx:if="{{flag5==0}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>  
             <view wx:if="{{flag5==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
@@ -131,6 +139,9 @@
         </view>
         <!-- 下面是第六个骰子 -->
         <view class="gifsingle">  
+            <view wx:if="{{flag6==0}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:if="{{flag6==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
@@ -151,8 +162,11 @@
             </view>
         </view>
     </view>
-   
   </view>
+   <!-- 数组输出大盒子box1 -->
+   <view class='box1'>
+         <view class="dice-out">您：{{result}}</view>
+    </view>
     <view class="box2">
         <button bindtap="gorandom">开始博饼</button>
     </view>
