@@ -7,7 +7,7 @@ Page({
     sanhong:'x',
     duitang:'x',
     zhuangyuan:'x',
-    playnum:0
+    playnum:0,
   },
   handleinput_yixiu(e){
     this.setData({

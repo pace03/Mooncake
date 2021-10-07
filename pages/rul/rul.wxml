@@ -1,0 +1,62 @@
+<!-- 规则页面 -->
+<!-- 背景view -->
+<view>
+	<!--pics文件夹下的background.jpg文件-->
+	<image class='background' src="/pics/background3.png" mode="aspectFill"></image>
+	<!--页面其它部分-->
+</view>
+<!-- 背景大box -->
+<view class='box'>
+	<view class='ruletitle'>
+		————		博饼规则		————
+	</view>
+	<view class='ruletable'>
+		<view class='tablehead'>
+			<view class='head1'>奖项</view>
+			<view class='head2'>示例</view>
+			<view class='head3'>数量</view>
+		</view>
+		<view class='tablecontent'>
+			<view class='head1'>一秀</view>
+			<view class='head2'>1个4</view>
+			<view class='head3'>32份</view>
+		</view>
+		<view class='tablecontent'>
+			<view class='head1'>二举</view>
+			<view class='head2'>2个4</view>
+			<view class='head3'>16份</view>
+		</view>
+		<view class='tablecontent'>
+			<view class='head1'>四进</view>
+			<view class='head2'>4个3</view>
+			<view class='head3'>8份</view>
+		</view>
+		<view class='tablecontent'>
+			<view class='head1'>三红</view>
+			<view class='head2'>3个4</view>
+			<view class='head3'>4份</view>
+		</view>
+		<view class='tablecontent'>
+			<view class='head1'>对堂</view>
+			<view class='head2'>1到6</view>
+			<view class='head3'>2份</view>
+		</view>
+		<view class='zhuangyuan'>
+			<view class='classify1'>状元</view>
+			<view class='classify2'>
+				<view>
+					<view class='head4'>普通状元</view>
+					<view class='head4'>五子登科</view>
+					<view class='head4'>状元插金花</view>
+					<view class='head4'>六黑</view>
+					<view class='head4'>六博红</view>
+				</view>
+			</view>
+			<view class='classify3'>1份</view>
+		</view>
+	</view>
+
+
+
+</view>
+

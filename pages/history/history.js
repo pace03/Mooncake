@@ -12,6 +12,7 @@ Page({
     // 事件处理函数
     onLoad:function(options){
         this.setData({
+          //playernum:wx.getStorageSync('playnum'),
           yixiu_award1:wx.getStorageSync('yixiu'),
           erju_award1:wx.getStorageSync('erju'),
           sijin_award1:wx.getStorageSync('sijin'),
@@ -20,7 +21,7 @@ Page({
           zhuangyuan_award1:wx.getStorageSync('zhuangyuan'),
           player_num:parseInt(wx.getStorageSync('playnum'))
         })
-        console.log(this.data.player_num)
+        console.log(this.data.playernum1)
         console.log(this.data.yixiu_award1)
         console.log(this.data.erju_award1)
         console.log(this.data.sijin_award1)

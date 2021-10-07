@@ -23,6 +23,7 @@ Page({
     /////
   },
   // 事件处理函数
+
   onLoad:function(options){
     this.setData({
       playernum:parseInt(wx.getStorageSync('playnum')),
@@ -41,10 +42,17 @@ Page({
     console.log(this.data.duitang_award)
     console.log(this.data.zhuangyuan_award)
   },
+  //跳转历史记录页面
   gohistory() {
     wx.navigateTo({
      url: '/pages/history/history'
     })
+  },
+//跳转博饼规则页面
+  gorule() {
+  wx.navigateTo({
+    url: '/pages/rul/rul'
+  })
   },
   judge:function(){
     for(let i=0;i<6;i++){
