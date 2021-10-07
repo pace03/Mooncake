@@ -1,9 +1,9 @@
-<!--index.wxml-->
+<!--history.wxml-->
 <include src='header.wxml'/>
 <view class='history-table-wrap'>
     <view class="table">
       <view class="tr">
-          <view class="th th1">姓名</view>
+          <view class="th th1">玩家</view>
           <view class="th th1">一秀</view>
           <view class="th th1">二举</view>
           <view class="th th1">四进</view>
@@ -11,8 +11,17 @@
           <view class="th th1">对堂</view>
           <view class="th th1">状元</view>
       </view>
-      <view class="tr" wx:for="{{100}}">
-          <view class="td td1"></view>
+      <view class="tr" >
+          <view class="td td1">奖品</view>
+          <view class="td td1">{{yixiu_award1}}</view>
+          <view class="td td1">{{erju_award1}}</view>
+          <view class="td td1">{{sijin_award1}}</view>
+          <view class="td td1">{{sanhong_award1}}</view>
+          <view class="td td1">{{duitang_award1}}</view>
+          <view class="td td1">{{zhuangyuan_award1}}</view>
+      </view>
+      <view class="tr" wx:for="{{player_num}}">
+          <view class="td td1">{{index+1}}</view>
           <view class="td td1"></view>
           <view class="td td1"></view>
           <view class="td td1"></view>

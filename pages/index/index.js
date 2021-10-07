@@ -6,41 +6,35 @@ Page({
     sijin:'x',
     sanhong:'x',
     duitang:'x',
-    zhuagnyuan:'x',
+    zhuangyuan:'x',
     playnum:0
   },
   handleinput_yixiu(e){
-    //console.log(e.detail.value);
     this.setData({
       yixiu:e.detail.value
     })
   },
   handleinput_erju(e){
-    //console.log(e.detail.value);
     this.setData({
       erju:e.detail.value
     })
   },
   handleinput_sijin(e){
-    //console.log(e.detail.value);
     this.setData({
       sijin:e.detail.value
     })
   },
   handleinput_sanhong(e){
-    //console.log(e.detail.value);
     this.setData({
       sanhong:e.detail.value
     })
   },
   handleinput_duitang(e){
-    //console.log(e.detail.value);
     this.setData({
       duitang:e.detail.value
     })
   },
   handleinput_zhuangyuan(e){
-    //console.log(e.detail.value);
     this.setData({
       zhuangyuan:e.detail.value
     })
@@ -49,10 +43,10 @@ Page({
     this.setData({
       playnum:e.detail.value
     })
-    //console.log(this.data.playnum)
   },
-  // 事件处理函数
+  // 跳转页面函数
   gogaming: function () {
+    //将首页获得的数据转到本地缓存
     wx.setStorageSync('playnum', this.data.playnum)
     wx.setStorageSync('yixiu', this.data.yixiu)
     wx.setStorageSync('erju', this.data.erju)

@@ -26,6 +26,9 @@
   }
   .th1,.td1{
     width: 10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
   .th{
     font-weight: 800;

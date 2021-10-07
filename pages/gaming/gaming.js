@@ -1,10 +1,10 @@
-// index.js
+// gaming.js
 Page({
   data: {
-    dice:[0,0,0,0,0,0],
-    num:[0,0,0,0,0,0],
+    dice:[0,0,0,0,0,0],//骰子点数
+    num:[0,0,0,0,0,0],//计数每个点数出现的次数
     level:0,// level 0:无奖  level 1：一秀；  level 2：二举； level 3：四进； level 4：三红； level 5：对堂； level 6：状元,
-    result:'白给',
+    result:'？？？',
     flag1:0,
     flag2:0,
     flag3:0,
@@ -12,19 +12,20 @@ Page({
     flag5:0,
     flag6:0,
     score:0,//同为状元大小判定
-    result:'白给',
-    playernum:0,
+    playernum:0,//玩家数量
+    /////奖品名
     yixiu_award:'x',
     erju_award:'x',
     sijin_award:'x',
     sanhong_award:'x',
     duitang_award:'x',
     zhuangyuan_award:'x'
+    /////
   },
   // 事件处理函数
   onLoad:function(options){
     this.setData({
-      playernum:wx.getStorageSync('playnum'),
+      playernum:parseInt(wx.getStorageSync('playnum')),
       yixiu_award:wx.getStorageSync('yixiu'),
       erju_award:wx.getStorageSync('erju'),
       sijin_award:wx.getStorageSync('sijin'),
@@ -41,9 +42,9 @@ Page({
     console.log(this.data.zhuangyuan_award)
   },
   gohistory() {
-  wx.navigateTo({
-    url: '/pages/history/history'
-  })
+    wx.navigateTo({
+     url: '/pages/history/history'
+    })
   },
   judge:function(){
     for(let i=0;i<6;i++){
@@ -353,7 +354,6 @@ switch(this.data.dice[5]){
 }
   },
   gorandom(){
-    
     this.data.level=0
     this.data.score=0
     this.setData({
@@ -370,7 +370,6 @@ switch(this.data.dice[5]){
       'dice[4]':Math.floor(Math.random()*6)+1,
       'dice[5]':Math.floor(Math.random()*6)+1
     })
-  
     for(let i=0;i<6;i++){
       this.data.num[this.data.dice[i]-1]+=1;
     }
@@ -380,5 +379,4 @@ switch(this.data.dice[5]){
     console.log(this.data.score)
     console.log(this.data.result)
   }
-},
-)
+})
