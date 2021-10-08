@@ -8,15 +8,15 @@
 <view class="box">
     <!-- 历史记录按钮盒子lishi -->
     <view class='lishi'>
-        <text bindtap="gorule" class='gorule'>博饼规则</text>
-        <text bindtap="gohistory" class='gohistory'>历史记录</text>
+        <view class="gorule"> <button bindtap="gorule" type="primary" >博饼规则</button></view>
+        <view class="gohistory"> <button bindtap="gohistory" type="primary" >历史记录</button></view>
     </view>
   <view class='boxgif'>
     <view class="gif123">
     <!-- 下面是第一个骰子 -->
         <view class="gifsingle">
             <view wx:if="{{flag1==0}}">
-             <image src="/pics/1.gif" mode="center"></image>
+             <image src="/pics/4.png" mode="center"></image>
             </view>
             <view wx:if="{{flag1==1}}">
              <image src="/pics/1.png" mode="center"></image>

@@ -11,31 +11,15 @@
     display:flex;
     flex-direction: row;
     justify-content:center;
-    color: rgb(14, 8, 8)  ;
-    font-family:cursive;
-    font-weight: 900;
-    font-size: 45rpx;
-    background-color: rgb(224, 24, 24) ;
-    height:50%;
-    border:outset;
-    border-left-width: 15rpx;
-    border-left-color: rgba(211, 211, 108, 0.74);
-    width:30%;
+    width:50%;
+    height:60%;
   }
   .gohistory{
-    border:outset;
-    background-color: rgb(224, 24, 24) ;
-    border-right-width: 15rpx;
-    border-right-color: rgb(247, 247, 3);
-    display:flex ;
+    display:flex;
     flex-direction: row;
     justify-content:center;
-    color: rgb(14, 8, 8)  ;
-    font-family:cursive;
-    font-weight: 900;
-    font-size: 45rpx;
-    height:50%;
-    width:30%;
+    width:50%;
+    height:60%;
   }
 .box1{
     border: none;
