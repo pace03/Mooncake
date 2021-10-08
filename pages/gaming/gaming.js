@@ -28,10 +28,12 @@ Page({
     sijin_num:0,
     sanhong_num:0,
     duitang_num:0,
-    zhuangyuan_num:0
+    zhuangyuan_num:0,
+    ///最终状元的数据
+    max_score:0,
+    max_player:0
   },
   // 事件处理函数
-
   onLoad:function(options){
     this.setData({
       playernum:parseInt(wx.getStorageSync('playnum')),
@@ -47,7 +49,9 @@ Page({
       sijin_num:8,
       sanhong_num:4,
       duitang_num:2,
-      zhuangyuan_num:1
+      zhuangyuan_num:1,
+      max_player:0,
+      max_score:0
     })
     // console.log(this.data.playernum)
     // console.log(this.data.yixiu_award)
@@ -60,6 +64,7 @@ Page({
   },
   //跳转历史记录页面
   gohistory() {
+    wx.setStorageSync('maxplayer', this.data.max_player)
     wx.navigateTo({
      url: '/pages/history/history'
     })
@@ -117,25 +122,31 @@ Page({
         }
       }//4个4+x+y
     }
-    ///////状元
+    if(this.data.level==6&&this.data.score>this.data.max_score){
+      this.data.max_score=this.data.score
+      this.data.max_player=this.data.playernum_now+1
+    }
+    // console.log(this.data.max_player)
+    // console.log(this.data.max_score)
+    ///////状元判定
     if(this.data.num==[1,1,1,1,1,1]&&this.data.level<5){
       this.data.level=5;
-    }
+    }//对堂判定
     if(this.data.num[3]==3&&this.data.level<4){
       this.data.level=4;
-    }
+    }//三红判定
     for(let i=0;i<6&&i!=3;i++){
       if(this.data.num[i]==4&&this.data.level<3){
         this.data.level=3;
       }
-    }
+    }//四进判定
     if(this.data.num[3]==2&&this.data.level<2){
       this.data.level=2;
-    }
+    }//二举判定
     if(this.data.num[3]==1&&this.data.level<1){
       this.data.level=1;
-    }
-    switch(this.data.level){
+    }//一秀判定
+    switch(this.data.level){//设定当前摇奖结果
       case 1:
         this.data.yixiu_num-=1
         if(this.data.yixiu_num>=0){
@@ -209,7 +220,7 @@ Page({
           })
         }else{
           this.setData({
-            'result':'状元没了'
+            'result':'状元'
           })
           this.data.zhuangyuan_num=0
         }
@@ -224,7 +235,7 @@ Page({
     // console.log(this.data.duitang_num)
     // console.log(this.data.zhuangyuan_num)
     
-    switch(this.data.dice[0]){
+    switch(this.data.dice[0]){//第一个骰子
       case 1:
         this.setData({
          flag1:1
@@ -260,7 +271,7 @@ Page({
           flag1:0
         })
     }
-    switch(this.data.dice[1]){
+    switch(this.data.dice[1]){//第二个骰子
     case 1:
       this.setData({
        flag2:1
@@ -294,7 +305,7 @@ Page({
     default:
       break
     }
-    switch(this.data.dice[2]){
+    switch(this.data.dice[2]){//第三个骰子
   case 1:
     this.setData({
      flag3:1
@@ -328,7 +339,7 @@ Page({
   default:
     break
     }
-    switch(this.data.dice[3]){
+    switch(this.data.dice[3]){//第四个骰子
       case 1:
         this.setData({
           flag4:1
@@ -362,7 +373,7 @@ Page({
       default:
       break
     }
-    switch(this.data.dice[4]){
+    switch(this.data.dice[4]){//第五个骰子
   case 1:
     this.setData({
      flag5:1
@@ -396,7 +407,7 @@ Page({
   default:
     break
     }
-    switch(this.data.dice[5]){
+    switch(this.data.dice[5]){//第六个骰子
   case 1:
     this.setData({
      flag6:1
@@ -430,9 +441,11 @@ Page({
   default:
     break
     }
+    /////游戏结束判定
     wx.setStorageSync('endflag', 0)
     if(this.data.yixiu_num==0&&this.data.erju_num==0&&this.data.sijin_num==0&&this.data.sanhong_num==0&&this.data.duitang_num==0&&this.data.zhuangyuan_num==0){
       wx.setStorageSync('endflag',1)
+      wx.setStorageSync('maxplayer', this.data.max_player)
       //console.log(wx.getStorageSync('endflag'))
       wx.navigateTo({
         url: '/pages/history/history'
@@ -441,7 +454,7 @@ Page({
       wx.setStorageSync('endflag', 0)
     }
   },
-  gorandom(){
+  gorandom(){//掷骰子动作
     this.data.level=0
     this.data.score=0
     this.setData({
