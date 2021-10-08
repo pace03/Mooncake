@@ -280,9 +280,31 @@ Page({
       case 6:
         this.data.zhuangyuan_num-=1
         if(this.data.zhuangyuan_num>=0){
-          this.setData({
-            'result':'状元'
-          })
+          if(this.data.score==600){
+            this.setData({
+              'result':'六杯红'
+            })
+          }
+          else if(this.data.score>=500&&this.data.score<600){
+            this.setData({
+              'result':'六黑'
+            })
+          }
+          else if(this.data.score==400){
+            this.setData({
+              'result':'状元插金花'
+            })
+          }
+          else if(this.data.score>=200&&this.data.score<400){
+            this.setData({
+              'result':'五子登科'
+            })
+          }
+          else if(this.data.score>=100&&this.data.score<200){
+            this.setData({
+              'result':'普通状元'
+            })
+          }
         }else{
           this.setData({
             'result':'状元'
