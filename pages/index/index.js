@@ -54,8 +54,17 @@ Page({
     wx.setStorageSync('sanhong', this.data.sanhong)
     wx.setStorageSync('duitang', this.data.duitang)
     wx.setStorageSync('zhuangyuan', this.data.zhuangyuan)
+
+    if(this.data.playnum==0)
+    {
+      wx.showToast({
+        title: '请输入人数再开始',
+        icon:'none'
+      })
+    }else{
     wx.navigateTo({
       url: '/pages/gaming/gaming'
     })
+  }
   },
 })
