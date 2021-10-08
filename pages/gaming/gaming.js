@@ -14,6 +14,7 @@ Page({
     score:0,//同为状元大小判定
     playernum:0,//玩家数量
     playernum_now:0,//当前玩家号码
+    playernum_next:1,//下一个玩家
     /////奖品名
     award_result:'？',
     yixiu_award:'？',
@@ -44,6 +45,7 @@ Page({
       duitang_award:wx.getStorageSync('duitang'),
       zhuangyuan_award:wx.getStorageSync('zhuangyuan'),
       playernum_now:0,
+      playernum_next:1,
       yixiu_num:32,
       erju_num:16,
       sijin_num:8,
@@ -476,11 +478,17 @@ Page({
     }
     this.judge()
     this.setData({
-      'playernum_now':this.data.playernum_now+1
+      'playernum_now':this.data.playernum_now+1,
+      'playernum_next':this.data.playernum_next+1
     })
     if(this.data.playernum_now==this.data.playernum+1){
       this.setData({
         'playernum_now':1
+      })
+    }
+    if(this.data.playernum_next==this.data.playernum+1){
+      this.setData({
+        'playernum_next':1
       })
     }
     console.log(this.data.playernum_now)

@@ -166,10 +166,11 @@
    <!-- 数组输出大盒子box1 -->
    <view class='box1'>
          <view class="dice-out1">
+         <text class='pitch' wx:if="{{playernum_now}}">玩家{{playernum_now}}：</text>
             <text class='pitch'>{{result}}</text>
          </view>
          <view class="dice-out2">
-            <text class='playershow'> 轮到玩家{{playernum_now}}博饼</text>
+            <text class='playershow'> 下面轮到玩家{{playernum_next}}博饼</text>
          </view>
     </view>
     <view class="box2">
