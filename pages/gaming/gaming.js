@@ -4,7 +4,7 @@ Page({
     dice:[0,0,0,0,0,0],//骰子点数
     num:[0,0,0,0,0,0],//计数每个点数出现的次数
     level:0,// level 0:无奖  level 1：一秀；  level 2：二举； level 3：四进； level 4：三红； level 5：对堂； level 6：状元,
-    result:'？？？',
+    result:'开始博饼吧',
     flag1:0,
     flag2:0,
     flag3:0,
@@ -374,7 +374,7 @@ Page({
     this.data.level=0
     this.data.score=0
     this.setData({
-      'result':'白给'
+      'result':'什么也没有博到'
     })
     for(let i=0;i<6;i++){
       this.data.num[i]=0

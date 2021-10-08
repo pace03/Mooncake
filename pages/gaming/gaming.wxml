@@ -16,25 +16,25 @@
     <!-- 下面是第一个骰子 -->
         <view class="gifsingle">
             <view wx:if="{{flag1==0}}">
-             <image src="/pics/4.png" mode="center"></image>
-            </view>
-            <view wx:if="{{flag1==1}}">
              <image src="/pics/1.gif" mode="center"></image>
             </view>
+            <view wx:if="{{flag1==1}}">
+             <image src="/pics/1.png" mode="center"></image>
+            </view>
             <view wx:elif="{{flag1==2}}">
-             <image src="/pics/2.gif" mode="center"></image>
+             <image src="/pics/2.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag1==3}}">
-             <image src="/pics/3.gif" mode="center"></image>
+             <image src="/pics/3.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag1==4}}">
-             <image src="/pics/4.gif" mode="center"></image>
+             <image src="/pics/4.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag1==5}}">
-             <image src="/pics/5.gif" mode="center"></image>
+             <image src="/pics/5.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag1==6}}">
-             <image src="/pics/6.gif" mode="center"></image>
+             <image src="/pics/6.png" mode="center"></image>
             </view>
         </view>
     <!-- 下面是第二个骰子 -->
@@ -165,8 +165,12 @@
   </view>
    <!-- 数组输出大盒子box1 -->
    <view class='box1'>
-         <view class="dice-out">您：{{result}}</view>
-         <view class="dice-out">玩家{{playernum_now}}</view>
+         <view class="dice-out1">
+            <text class='pitch'>{{result}}</text>
+         </view>
+         <view class="dice-out2">
+            <text class='playershow'> 轮到玩家{{playernum_now}}博饼</text>
+         </view>
     </view>
     <view class="box2">
         <button bindtap="gorandom">开始博饼</button>

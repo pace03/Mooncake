@@ -1,12 +1,4 @@
 /**app.wxss**/
-
-.dice-out {
-  height: 220rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50rpx;
-}
 .title1{
  line-height: 50px;
   font-size: 20px;

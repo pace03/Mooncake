@@ -1,4 +1,5 @@
 {
+    "setting": {},
     "condition": {
         "plugin": {
             "list": []
@@ -14,6 +15,12 @@
                 {
                     "name": "pages/rul/rul",
                     "pathName": "pages/rul/rul",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/gaming/gaming",
+                    "pathName": "pages/gaming/gaming",
                     "query": "",
                     "scene": null
                 }
