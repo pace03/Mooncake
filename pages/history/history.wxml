@@ -1,7 +1,11 @@
 <!--history.wxml-->
 <include src='header.wxml'/>
 <view class='history-table-wrap'>
+    
     <view class="table">
+      <view class="tr" wx:if="{{ending_flag==1}}">
+          <view class="th">奖品领完，游戏结束！！！</view>
+      </view>
       <view class="tr">
           <view class="th th1">玩家</view>
           <view class="th th1">一秀</view>
