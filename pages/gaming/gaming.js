@@ -32,7 +32,9 @@ Page({
     zhuangyuan_num:0,
     ///最终状元的数据
     max_score:0,
-    max_player:0
+    max_player:0,
+    ////
+    record:[{count1:0,count2:0,count3:0,count4:0,count5:0,count6:0}]
   },
   // 事件处理函数
   onLoad:function(options){
@@ -55,7 +57,15 @@ Page({
       max_player:0,
       max_score:0
     })
-    // console.log(this.data.playernum)
+    for(let i=1;i<this.data.playernum;i++){
+      var newArray=[{count1:0,count2:0,count3:0,count4:0,count5:0,count6:0}]
+      this.setData({
+        record:this.data.record.concat(newArray)
+      })
+    }
+    console.log(this.data.playernum)
+    
+    
     // console.log(this.data.yixiu_award)
     // console.log(this.data.erju_award)
     // console.log(this.data.sijin_award)
@@ -67,6 +77,7 @@ Page({
   //跳转历史记录页面
   gohistory() {
     wx.setStorageSync('maxplayer', this.data.max_player)
+    wx.setStorageSync('record', JSON.stringify(this.data.record))
     wx.navigateTo({
      url: '/pages/history/history'
     })
@@ -148,6 +159,49 @@ Page({
     if(this.data.num[3]==1&&this.data.level<1){
       this.data.level=1;
     }//一秀判定
+    if(this.data.level){
+      if(this.data.playernum_now==this.data.playernum){
+        this.data.playernum_now=0
+      }
+      switch(this.data.level){
+        case 1:
+          if(this.data.yixiu_num>0){
+            this.data.record[this.data.playernum_now].count1+=1
+          }
+          break;
+        case 2:
+          if(this.data.erju_num>0){
+            this.data.record[this.data.playernum_now].count2+=1
+          }
+          break;
+        case 3:
+          if(this.data.sijin_num>0){
+            this.data.record[this.data.playernum_now].count3+=1
+          }
+          break;
+        case 4:
+          if(this.data.sanhong_num>0){
+            this.data.record[this.data.playernum_now].count4+=1
+          }
+          break;
+        case 5:
+          if(this.data.duitang_num>0){
+            this.data.record[this.data.playernum_now].count5+=1
+          }
+          break;
+        case 6:
+          
+            this.data.record[this.data.playernum_now].count6+=1
+        
+          break;
+        default:
+          break;
+      }
+      if(this.data.playernum_now==0){
+        this.data.playernum_now=this.data.playernum
+      }
+    }
+    //console.log(this.data.record)
     switch(this.data.level){//设定当前摇奖结果
       case 1:
         this.data.yixiu_num-=1
@@ -159,7 +213,7 @@ Page({
           this.setData({
             'result':'一秀没了'
           })
-          this.data.yixiu_num=0
+          this.data.yixiu_num=-1
         }
         break;
       case 2:
@@ -172,7 +226,7 @@ Page({
           this.setData({
             'result':'二举没了'
           })
-          this.data.erju_num=0
+          this.data.erju_num=-1
         }
         break;
       case 3:
@@ -185,7 +239,7 @@ Page({
           this.setData({
             'result':'四进没了'
           })
-          this.data.sijin_num=0
+          this.data.sijin_num=-1
         }
         break;
       case 4:
@@ -198,7 +252,7 @@ Page({
           this.setData({
             'result':'三红没了'
           })
-          this.data.sanhong_num=0
+          this.data.sanhong_num=-1
         }
         break;
       case 5:
@@ -211,7 +265,7 @@ Page({
           this.setData({
             'result':'对堂没了'
           })
-          this.data.duitang_num=0
+          this.data.duitang_num=-1
         }
         break;
       case 6:
@@ -224,7 +278,7 @@ Page({
           this.setData({
             'result':'状元'
           })
-          this.data.zhuangyuan_num=0
+          this.data.zhuangyuan_num=-1
         }
         break;
       default:
@@ -445,13 +499,18 @@ Page({
     }
     /////游戏结束判定
     wx.setStorageSync('endflag', 0)
-    if(this.data.yixiu_num==0&&this.data.erju_num==0&&this.data.sijin_num==0&&this.data.sanhong_num==0&&this.data.duitang_num==0&&this.data.zhuangyuan_num==0){
+      // console.log(this.data.yixiu_num)
+      // console.log(this.data.erju_num)
+      // console.log(this.data.sijin_num)
+      // console.log(this.data.sanhong_num)
+      // console.log(this.data.duitang_num)
+      // console.log(this.data.zhuangyuan_num)
+    if(this.data.yixiu_num<=0&&this.data.erju_num<=0&&this.data.sijin_num<=0&&this.data.sanhong_num<=0&&this.data.duitang_num<=0&&this.data.zhuangyuan_num<=0){
       wx.setStorageSync('endflag',1)
       wx.setStorageSync('maxplayer', this.data.max_player)
       //console.log(wx.getStorageSync('endflag'))
-      wx.navigateTo({
-        url: '/pages/history/history'
-       })
+      
+      this.gohistory()
     }else{
       wx.setStorageSync('endflag', 0)
     }
@@ -473,6 +532,14 @@ Page({
       'dice[4]':Math.floor(Math.random()*6)+1,
       'dice[5]':Math.floor(Math.random()*6)+1
     })
+    // this.setData({
+    //   'dice[0]':4,
+    //   'dice[1]':4,
+    //   'dice[2]':4,
+    //   'dice[3]':4,
+    //   'dice[4]':5,
+    //   'dice[5]':5
+    // })
     for(let i=0;i<6;i++){
       this.data.num[this.data.dice[i]-1]+=1
     }

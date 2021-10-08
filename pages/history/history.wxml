@@ -4,7 +4,7 @@
     
     <view class="table">
       <view class="tr" wx:if="{{ending_flag==1}}">
-          <view class="th">奖品领完，游戏结束！状元：{{max_player}}</view>
+          <view class="th">奖品领完，游戏结束！状元：玩家{{max_player}}</view>
       </view>
       <view class="tr">
           <view class="th th1">玩家</view>
@@ -26,12 +26,12 @@
       </view>
       <view class="tr" wx:for="{{player_num}}">
           <view class="td td1">{{index+1}}</view>
-          <view class="td td1"></view>
-          <view class="td td1"></view>
-          <view class="td td1"></view>
-          <view class="td td1"></view>
-          <view class="td td1"></view>
-          <view class="td td1"></view>
+          <view class="td td1">{{record1[index].count1}}</view>
+          <view class="td td1">{{record1[index].count2}}</view>
+          <view class="td td1">{{record1[index].count3}}</view>
+          <view class="td td1">{{record1[index].count4}}</view>
+          <view class="td td1">{{record1[index].count5}}</view>
+          <view class="td td1">{{record1[index].count6}}</view>
       </view>
     </view>
  </view>
