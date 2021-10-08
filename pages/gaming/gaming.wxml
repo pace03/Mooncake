@@ -8,8 +8,8 @@
 <view class="box">
     <!-- 历史记录按钮盒子lishi -->
     <view class='lishi'>
-        <button bindtap="gorule" type="primary" size="default">博饼规则</button>
-        <button bindtap="gohistory" type="primary" size="default">历史记录</button>
+        <text bindtap="gorule" class='gorule'>博饼规则</text>
+        <text bindtap="gohistory" class='gohistory'>历史记录</text>
     </view>
   <view class='boxgif'>
     <view class="gif123">

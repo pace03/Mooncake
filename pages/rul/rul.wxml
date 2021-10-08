@@ -8,7 +8,7 @@
 <!-- 背景大box -->
 <view class='box'>
 	<view class='ruletitle'>
-		<text class='gamingrule'>————		博饼规则		————</text>
+		<text class='gamingrule'>博饼规则</text>
 	</view>
 	<view class='ruletable'>
 		<view class='tablehead'>

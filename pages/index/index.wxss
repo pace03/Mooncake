@@ -18,9 +18,9 @@ input{
     background-color: white;
 }
 .text1{
-   font-size: 30rpx;
+   font-size: 35rpx;
    font-weight:1000;
-   color:rgb(5, 243, 252);
+   color:rgb(250, 250, 150);
    
 }
 .butt{

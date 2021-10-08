@@ -1,14 +1,15 @@
 .ruletitle{
-    height:16%;
+    height:6%;
     font-size:50rpx;
     display:flex;
+    background-color:rgb(122, 15, 15) ;
     justify-content:center;
-    align-items:flex-end;
+    align-items:flex-start;
     color:yellow;
 }
 .ruletable{
     width:99%;
-    height:72%;
+    height:93%;
     border: solid rgb(250, 250, 150);
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@
 }
 .head1{
     height:100%;
-    width:20%;
+    width:23%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +47,7 @@
 }
 .head2{
     height:100%;
-    width:55%;
+    width:54%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +59,7 @@
 }
 .head3{
     height:100%;
-    width:20%;
+    width:23%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +89,7 @@
     border-top-width: 0;
     border-bottom-width: 0;
     height:100%;
-    width:20%;
+    width:23%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +101,7 @@
     border-bottom-width: 0;
     border-color: rgb(250, 250, 150);
     height:100%;
-    width:55%;
+    width:54%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +109,7 @@
 }
 .classify3{
     height:100%;
-    width:20%;
+    width:23%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,17 +127,20 @@
     
 }
 .text1{
-    font-size: 40rpx;
+    font-size: 55rpx;
+    font-family: 楷体;
     color:rgb(122, 15, 15);
     font-weight: 800;
 }
 .text2{
-    font-size: 30rpx;
+    font-size: 40rpx;
+    font-family: 楷体;
     color:rgba(243, 243, 50, 0.836);
     font-weight: 600;
 }
 .gamingrule{
-    font-size: 50rpx;
-    color:rgba(243, 243, 50, 0.836);
+    font-size: 60rpx;
+    font-family: 楷体;
+    color:rgb(250, 250, 150);
     font-weight: 1000;
 }

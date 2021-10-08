@@ -41,7 +41,7 @@ Page({
   },
   handleinput_playnum(e){
     this.setData({
-      playnum:e.detail.value
+      playnum:e.detail.value,
     })
   },
   // 跳转页面函数
