@@ -138,6 +138,11 @@ Page({
     if(this.data.level==6&&this.data.score>this.data.max_score){
       this.data.max_score=this.data.score
       this.data.max_player=this.data.playernum_now+1
+      if(this.data.max_player>this.data.playernum){
+        this.data.max_player=1
+      }
+   
+      
     }
     // console.log(this.data.max_player)
     // console.log(this.data.max_score)
