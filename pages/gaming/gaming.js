@@ -142,9 +142,18 @@ Page({
     // console.log(this.data.max_player)
     // console.log(this.data.max_score)
     ///////状元判定
-    if(this.data.num==[1,1,1,1,1,1]&&this.data.level<5){
-      this.data.level=5;
+    if(this.data.level<5){
+      let flag=0
+      for(let i=0;i<6;i++){
+        if(this.data.num[i]!=1){
+          flag=1
+        }
+      }
+      if(flag==0){
+        this.data.level=5;
+      }
     }//对堂判定
+    console.log(this.data.num)
     if(this.data.num[3]==3&&this.data.level<4){
       this.data.level=4;
     }//三红判定
@@ -533,11 +542,11 @@ Page({
       'dice[5]':Math.floor(Math.random()*6)+1
     })
     // this.setData({
-    //   'dice[0]':4,
+    //   'dice[0]':1,
     //   'dice[1]':4,
-    //   'dice[2]':4,
-    //   'dice[3]':4,
-    //   'dice[4]':5,
+    //   'dice[2]':3,
+    //   'dice[3]':2,
+    //   'dice[4]':6,
     //   'dice[5]':5
     // })
     for(let i=0;i<6;i++){
