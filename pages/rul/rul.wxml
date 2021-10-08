@@ -8,51 +8,49 @@
 <!-- 背景大box -->
 <view class='box'>
 	<view class='ruletitle'>
-		————		博饼规则		————
+		<text class='gamingrule'>————		博饼规则		————</text>
 	</view>
 	<view class='ruletable'>
 		<view class='tablehead'>
-			<view class='head1'>奖项</view>
-			<view class='head2'>示例</view>
-			<view class='head3'>数量</view>
+			<view class='head1'><text class='text1'>奖项</text></view>
+			<view class='head2'><text class='text1'>示例</text></view>
+			<view class='head3'><text class='text1'>数量</text></view>
 		</view>
 		<view class='tablecontent'>
-			<view class='head1'>一秀</view>
-			<view class='head2'>1个4</view>
-			<view class='head3'>32份</view>
+			<view class='head1'><text class='text2'>一秀</text></view>
+			<view class='head2'><text class='text2'>1个4</text></view>
+			<view class='head3'><text class='text2'>32份</text></view>
 		</view>
 		<view class='tablecontent'>
-			<view class='head1'>二举</view>
-			<view class='head2'>2个4</view>
-			<view class='head3'>16份</view>
+			<view class='head1'><text class='text2'>二举</text></view>
+			<view class='head2'><text class='text2'>2个4</text></view>
+			<view class='head3'><text class='text2'>16份</text></view>
 		</view>
 		<view class='tablecontent'>
-			<view class='head1'>四进</view>
-			<view class='head2'>4个3</view>
-			<view class='head3'>8份</view>
+			<view class='head1'><text class='text2'>四进</text></view>
+			<view class='head2'><text class='text2'>4个3</text></view>
+			<view class='head3'><text class='text2'>8份</text></view>
 		</view>
 		<view class='tablecontent'>
-			<view class='head1'>三红</view>
-			<view class='head2'>3个4</view>
-			<view class='head3'>4份</view>
+			<view class='head1'><text class='text2'>三红</text></view>
+			<view class='head2'><text class='text2'>3个4</text></view>
+			<view class='head3'><text class='text2'>4份</text></view>
 		</view>
 		<view class='tablecontent'>
-			<view class='head1'>对堂</view>
-			<view class='head2'>1到6</view>
-			<view class='head3'>2份</view>
+			<view class='head1'><text class='text2'>对堂</text></view>
+			<view class='head2'><text class='text2'>1到6各1个</text></view>
+			<view class='head3'><text class='text2'>2份</text></view>
 		</view>
 		<view class='zhuangyuan'>
-			<view class='classify1'>状元</view>
+			<view class='classify1'><text class='text2'>状元</text></view>
 			<view class='classify2'>
-				<view>
-					<view class='head4'>普通状元</view>
-					<view class='head4'>五子登科</view>
-					<view class='head4'>状元插金花</view>
-					<view class='head4'>六黑</view>
-					<view class='head4'>六博红</view>
-				</view>
+					<view class='head4'><text class='text2'>普通状元：4个4+x+y</text></view>
+					<view class='head4'><text class='text2'>五子登科：5个x+y</text></view>
+					<view class='head4'><text class='text2'>状元插金花：4个4，2个1</text></view>
+					<view class='head4'><text class='text2'>六黑：6个x（不包括6个4）</text></view>
+					<view class='head4'><text class='text2'>六博红：6个4</text></view>
 			</view>
-			<view class='classify3'>1份</view>
+			<view class='classify3'><text class='text2'>1份</text></view>
 		</view>
 	</view>
 
