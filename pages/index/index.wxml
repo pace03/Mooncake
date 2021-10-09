@@ -31,7 +31,7 @@
     </view>
     <view class="kuang">
         <text class="text1">人数：</text>
-         <input type="text" bindinput="handleinput_playnum"> </input>
+         <input type="number" bindinput="handleinput_playnum"> </input>
     </view>
     <view class="butt">
         <button bindtap="gogaming" type="primary" size="default">现在开始</button>
