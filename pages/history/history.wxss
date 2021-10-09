@@ -38,6 +38,7 @@
   }
   .td{
     font-size: 20rpx;
+    font-weight:600;
     color: #ec9480;
   }
   

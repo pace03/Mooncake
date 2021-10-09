@@ -16,7 +16,7 @@
     <!-- 下面是第一个骰子 -->
         <view class="gifsingle">
             <view wx:if="{{flag1==0}}">
-             <image src="/pics/4.png" mode="center"></image>
+             <image src="/pics/4.gif" mode="center"></image>
             </view>
             <view wx:if="{{flag1==1}}">
              <image src="/pics/1.png" mode="center"></image>
@@ -40,49 +40,49 @@
     <!-- 下面是第二个骰子 -->
         <view class="gifsingle">  
             <view wx:if="{{flag2==0}}">
-             <image src="/pics/4.png" mode="center"></image>
-            </view>
-            <view wx:if="{{flag2==1}}">
-             <image src="/pics/1.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag2==2}}">
-             <image src="/pics/2.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag2==3}}">
-             <image src="/pics/3.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag2==4}}">
              <image src="/pics/4.gif" mode="center"></image>
             </view>
+            <view wx:if="{{flag2==1}}">
+             <image src="/pics/1.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag2==2}}">
+             <image src="/pics/2.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag2==3}}">
+             <image src="/pics/3.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag2==4}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:elif="{{flag2==5}}">
-             <image src="/pics/5.gif" mode="center"></image>
+             <image src="/pics/5.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag2==6}}">
-             <image src="/pics/6.gif" mode="center"></image>
+             <image src="/pics/6.png" mode="center"></image>
             </view>
         </view>
     <!-- 下面是第三个骰子 -->
     <view class="gifsingle">  
             <view wx:if="{{flag3==0}}">
-             <image src="/pics/4.png" mode="center"></image>
-            </view>
-            <view wx:if="{{flag3==1}}">
-             <image src="/pics/1.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag3==2}}">
-             <image src="/pics/2.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag3==3}}">
-             <image src="/pics/3.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag3==4}}">
              <image src="/pics/4.gif" mode="center"></image>
             </view>
+            <view wx:if="{{flag3==1}}">
+             <image src="/pics/1.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag3==2}}">
+             <image src="/pics/2.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag3==3}}">
+             <image src="/pics/3.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag3==4}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:elif="{{flag3==5}}">
-             <image src="/pics/5.gif" mode="center"></image>
+             <image src="/pics/5.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag3==6}}">
-             <image src="/pics/6.gif" mode="center"></image>
+             <image src="/pics/6.png" mode="center"></image>
             </view>
         </view>
     </view>
@@ -92,73 +92,73 @@
     <!-- 下面是第四个骰子 -->
         <view class="gifsingle">
             <view wx:if="{{flag4==0}}">
-             <image src="/pics/4.png" mode="center"></image>
+             <image src="/pics/4.gif" mode="center"></image>
             </view>  
             <view wx:if="{{flag4==1}}">
-             <image src="/pics/1.gif" mode="center"></image>
+             <image src="/pics/1.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag4==2}}">
-             <image src="/pics/2.gif" mode="center"></image>
+             <image src="/pics/2.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag4==3}}">
-             <image src="/pics/3.gif" mode="center"></image>
+             <image src="/pics/3.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag4==4}}">
-             <image src="/pics/4.gif" mode="center"></image>
+             <image src="/pics/4.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag4==5}}">
-             <image src="/pics/5.gif" mode="center"></image>
+             <image src="/pics/5.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag4==6}}">
-             <image src="/pics/6.gif" mode="center"></image>
+             <image src="/pics/6.png" mode="center"></image>
             </view>
         </view>
         <!-- 下面是第五个骰子 -->
         <view class="gifsingle">
             <view wx:if="{{flag5==0}}">
-             <image src="/pics/4.png" mode="center"></image>
+             <image src="/pics/4.gif" mode="center"></image>
             </view>  
             <view wx:if="{{flag5==1}}">
-             <image src="/pics/1.gif" mode="center"></image>
+             <image src="/pics/1.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag5==2}}">
-             <image src="/pics/2.gif" mode="center"></image>
+             <image src="/pics/2.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag5==3}}">
-             <image src="/pics/3.gif" mode="center"></image>
+             <image src="/pics/3.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag5==4}}">
-             <image src="/pics/4.gif" mode="center"></image>
+             <image src="/pics/4.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag5==5}}">
-             <image src="/pics/5.gif" mode="center"></image>
+             <image src="/pics/5.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag5==6}}">
-             <image src="/pics/6.gif" mode="center"></image>
+             <image src="/pics/6.png" mode="center"></image>
             </view>
         </view>
         <!-- 下面是第六个骰子 -->
         <view class="gifsingle">  
             <view wx:if="{{flag6==0}}">
-             <image src="/pics/4.png" mode="center"></image>
-            </view>
-            <view wx:if="{{flag6==1}}">
-             <image src="/pics/1.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag6==2}}">
-             <image src="/pics/2.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag6==3}}">
-             <image src="/pics/3.gif" mode="center"></image>
-            </view>
-            <view wx:elif="{{flag6==4}}">
              <image src="/pics/4.gif" mode="center"></image>
             </view>
+            <view wx:if="{{flag6==1}}">
+             <image src="/pics/1.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag6==2}}">
+             <image src="/pics/2.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag6==3}}">
+             <image src="/pics/3.png" mode="center"></image>
+            </view>
+            <view wx:elif="{{flag6==4}}">
+             <image src="/pics/4.png" mode="center"></image>
+            </view>
             <view wx:elif="{{flag6==5}}">
-             <image src="/pics/5.gif" mode="center"></image>
+             <image src="/pics/5.png" mode="center"></image>
             </view>
             <view wx:elif="{{flag6==6}}">
-             <image src="/pics/6.gif" mode="center"></image>
+             <image src="/pics/6.png" mode="center"></image>
             </view>
         </view>
     </view>
